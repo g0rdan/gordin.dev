@@ -43,4 +43,46 @@ public class App : MvvmCross.Core.ViewModels.MvxApplication
 
 App это наш экземпляр приложения, который в методе Initialize() позволяет определенным образом инициализировать "Сервисы" (про них мы поговорим позже) и указывает, какая ViewModel будет первой при старте приложения. В нашем случае это FirstViewModel.
 
-Каждая ViewModel должна наследоваться от MvxViewModel.
+Каждая ViewModel должна наследоваться от MvxViewModel. Как видно из картинки выше (хоть она и не совсем правильная), View общается с ViewModel посредством Bindings и Commands.
+
+#### Binding ####
+
+Bindings позволяет связывать отображаемые данные в ViewModel c View так, чтобы при изменении этих данных во ViewModel, они изменялись во View (и наоборот). Давайте посмотрим пример:
+
+```csharp
+public class FirstViewModel : MvxViewModel
+{
+  private string _hello = "Hello MvvmCross";
+  public string Hello
+  {
+  	get { return _hello; }
+	set { SetProperty(ref _hello, value); }
+  }
+
+  private ICommand _submitCommand;
+  public ICommand SubmitCommand
+  {
+    get
+	{
+	  _submitCommand = _submitCommand ?? new MvxCommand(DoSubmit);
+	  return _submitCommand;
+	}
+  }
+}
+``` 
+
+При изменении поля Hello вызывается метод SetProperty() который и позволяет нам делать магию. Как именно связывать данные во ViewModel c View мы поговорим чуть позже. В MvvmCross связывать View и ViewModel можно 4 способами:
+* One-Way
+* One-Way-To-Source
+* Two-Way
+* One-Time
+
+
+Для подробного изучения вопроса я рекомендую взглянуть на эту [страницу](https://github.com/MvvmCross/MvvmCross/wiki/databinding)
+
+#### Command ####
+
+Command методы служат для взаимодействия пользователя с приложением. Самый простой пример - тап по кнопке. В нашем теоретическом приложении мы можем связать нажатие на какую-либо кнопку с полем SubmitCommand и при вызове (нажатии) этого поля выполнится Action в MvxCommand. В нашем случае выполнится несуществующий метод DoSubmit().
+
+Пожалуй все. Первый пост не особо информативен, как я вижу. Но я исправлюсь :) Дальше мы узнаем каким образом мы можем связать данные в ViewModel с каждой из платформ.
+
