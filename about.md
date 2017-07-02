@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I like a smart people, a good walk and sun.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I’m a big C# fan! My area of choice is the.NET universe, especially now that Microsoft has turned to the open source community. Speaking of OSS, I’m also a team member in MvvmCross. My interests include all aspects of mobile development and more.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[gordan.ru [at] gmail [dot] com](mailto:gordan.ru@gmail.com)
