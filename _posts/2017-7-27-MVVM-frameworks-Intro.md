@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Let's compare some MVVM frameworks
+description: "Intro for comparing most popular mvvm frameworks for Xamarin."
+date: 2017-07-27
+tags: [mvvm, framework, xamarin, test]
+comments: true
+share: true
 ---
 
 Every time when you want to start a new project with Xamarin, on one hand you want to try a new libraries and frameworks, but in other hand you are scared about "what if I will spend pretty much time to learn some framework/libraries/etc, it will not fit in my requirements".
