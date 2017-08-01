@@ -23,7 +23,7 @@ So, let's take a look to a most popular Xamarin MVVM frameworks (by alphabet):
 In this series of articles I want to dive deep into a few things:
 
 - Intro (it's just overview)
-- Work with Xamarin.Forms
+- [Work with Xamarin.Forms](http://g0rdan.com/2017-08-01/Mvvm-frameworks-work-with-Xamarin-forms/)
 - Bindings
 - Navigation
 - Plugins/modules/etc
