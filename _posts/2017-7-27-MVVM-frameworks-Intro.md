@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-Every time when you want to start a new project with Xamarin, on one hand you want to try a new libraries and frameworks, but in other hand you are scared about "what if I will spend pretty much time to learn some framework/libraries/etc, it will not fit in my requirements".
+Every time when you want to start a new project with Xamarin, on one hand you want to try a new libraries and frameworks, but on the other hand you are scared about "what if I will spend pretty much time to learn some framework/libraries/etc, it will not fit in my requirements".
 
 I'm familiar only with MvvmCross and it happens with me every time when I want to try a new MVVM framework for some new projects.
 
@@ -23,9 +23,9 @@ So, let's take a look to a most popular Xamarin MVVM frameworks (by alphabet):
 In this series of articles I want to dive deep into a few things:
 
 - Intro (it's just overview)
+- Work with Xamarin.Forms
 - Bindings
 - Navigation
-- Work with Xamarin.Forms
 - Plugins/modules/etc
 - Support
 
