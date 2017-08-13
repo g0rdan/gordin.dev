@@ -12,7 +12,15 @@ First of all, I need explain why we have to review this. Most of all frameworks 
 
 Second of all, we need a common platform to see how frameworks are working and it's Xamarin.Forms projects. You can say "Xamarin.Forms already has MVVM pattern implementation inside" and you will be right. But many of frameworks have more things that only MVVM and it should to help you build a great apps.
 
-I suggest to make a simple projects for each of frameworks. It's app for iOS and Android. The app will be showing two screens. The first will contain a list of cat names and second will has a picture of each cats.
+When you want to use any of frameworks you have to download some nuget packages which contains frameworks. From time to time the packages can change names and structure. I won't write what exactly packages you should find and install. You have to figure it out by yourself. 
+
+## FreshMvvm
+
+Probably, FreshMvvm has a most simple way to use the framework with your Xamarin.Forms app. Basicaly, you just need give a name of view models as "a QuotePageModel must have a QuotePage". The BindingContext on the page will be automatically set with the Model. That's it.
+
+## MvvmCross
+
+MvvmCross documentation has a great [guidline](https://www.mvvmcross.com/documentation/platform/xamarin-forms) how to use the framework with Xamarin.Forms. It's more work to join MvvmCross wich Xamarin.Forms project and I won't repeat all of steps that you can find on official document page. Just want to notice, that we have to inherit from 'MvxFormsApplication' instead 'FormsApplication' in core project. Also we have to add a "Presenter" (we'll talk more about presenter soon) to platform projects.
 
 *To be continued*
 
