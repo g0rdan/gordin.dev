@@ -22,6 +22,10 @@ Probably, FreshMvvm has a most simple way to use the framework with your Xamarin
 
 MvvmCross documentation has a great [guidline](https://www.mvvmcross.com/documentation/platform/xamarin-forms) how to use the framework with Xamarin.Forms. It's more work to join MvvmCross wich Xamarin.Forms project and I won't repeat all of steps that you can find on official document page. Just want to notice, that we have to inherit from 'MvxFormsApplication' instead 'FormsApplication' in core project. Also we have to add a "Presenter" (we'll talk more about presenter soon) to platform projects.
 
+## MvvmLight
+
+
+
 *To be continued*
 
 > If you see some inaccuracies or defects in this article, you can send [PR](https://github.com/g0rdan/g0rdan.github.io) to improve it. Especially if you see grammar mistakes (probably it has a lot of mistakes).
