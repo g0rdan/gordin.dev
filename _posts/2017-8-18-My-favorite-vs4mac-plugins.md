@@ -10,7 +10,7 @@ share: true
 
 As you know, Visual Studio for Mac is a mobile-first, cloud-first IDE from Microsoft (Xamarin). This IDE supports develop for iOS, Android, Mac, Web, Games, etc. It also has debugger and rich tooling. Also, as a big IDE, it has "Add-Ins" plugin system.
 
-Like others big IDEs vs4mac can be improved by installing plugins. I've worked with vs4mac (Xamarin Studio) more than 3 years and collected a bunch of plugins that help me. Let's take a look to following list below.
+Like others big IDEs vs4mac can be improved by installing plugins. I work with vs4mac (Xamarin Studio) more than 3 years and collected a bunch of plugins that help me. Let's take a look to following list below.
 
 ## [MFactor](https://www.mfractor.com)
 
