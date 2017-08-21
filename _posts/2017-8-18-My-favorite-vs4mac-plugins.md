@@ -36,7 +36,7 @@ You can find more information about how MFactor works on [official doc pages](ht
 
 Apparently, you've noticed that working with vs4mac (but more Xamarin Studio) it's not same feelings about working with big Visual Studio. For example, you can don't find familiar hot keys. This plugin can help you wiht that. Every time when you are opening vs4mac it's showing you some tips fow working with IDE.
 
-![macaque tips example](http://127.0.0.1:4000/assets/images/macaque.tips.example.png)
+![macaque tips example](http://g0rdan.com/assets/images/macaque.tips.example.png)
 
 Probably, you know about `Command + .` hot key. It's  the shortest way to find some files in your projects. But apparently, you don't know that if you will type `MainView:75` in search input you can jump into 75 line of MainView file! That's amazing! You definitly have to try this plugin.
 
