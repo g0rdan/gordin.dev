@@ -7,7 +7,13 @@ I like a smart people, a good walk and sun.
 
 ### More Information
 
-I’m a big C# fan! My area of choice is the.NET universe, especially now that Microsoft has turned to the open source community. Speaking of OSS, I’m also a team member in MvvmCross. My interests include all aspects of mobile development and more.
+Good morning/day/evening, I'm Denis and I'll write some posts about dev, mobile, IT here.
+The main purpose of this blog is making my English level more higher. I'm going to find job in states and I have to impove my language skills. By the way, if you are looking at some programmer and think I can fit for you, let me know.
+I preffer write English articles, but sometimes I'll make translate from En to Ru.
+
+Well, that's it.
+
+One more thing, if you see some grammar mistakes (you definitely will see), also let me know :)
 
 ### Contact me
 
