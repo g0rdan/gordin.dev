@@ -6,6 +6,7 @@ date: 2017-08-25
 tags: [xamarin, vs4mac]
 comments: true
 share: true
+published: false
 ---
 
 Probably you saw my previuos [post](http://g0rdan.com/2017-08-18/My-favorite-vs4mac-plugins/) about plugins for vs4mac. If you didn't see follow by link, you'll like it.
