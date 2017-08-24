@@ -4,7 +4,7 @@ permalink: /cv/
 ---
 ## Denis Gordin
 
-[gordin.dan [at] gmail [dot] com](mailto:gordan.ru@gmail.com)
+[gordan.ru [at] gmail [dot] com](mailto:gordan.ru@gmail.com)
 
 I’m a big C# fan! My area of choice is the .NET universe, especially now that Microsoft has turned to the open source community. Speaking of OSS, I’m also a team member in MvvmCross. My interests include all aspects of mobile development and more. I prefer C# / .NET but if needed, I can easily switch to another language / technology, depending on the task.
 
