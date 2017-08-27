@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Best tips for Visual Studio for Mac
+title: Best 5 tips and tricks in Visual Studio for Mac
 description: "You will definitely like this tips. These tips will save your time and nerves"
 date: 2017-08-25
 tags: [xamarin, vs4mac]
 comments: true
 share: true
-published: false
+published: true
 ---
 
-Probably you saw my previuos [post](http://g0rdan.com/2017-08-18/My-favorite-vs4mac-plugins/) about plugins for vs4mac. If you didn't see follow by link, you'll like it.
+Probably you have seen my previuos [post](http://g0rdan.com/2017-08-18/My-favorite-vs4mac-plugins/) about plugins for vs4mac. If you didn't see follow by link, you'll like it.
 
 I mentonied on post about **Macaque Tips** plugin. I really like it and I want to tell about the plugin more.
 
@@ -49,8 +49,20 @@ Visual Studio for Mac has greate feature to help you mark some pice of code whic
 
 ### Show Code Generation
 
-The Show Code Generation (⌘I) command can automatically generate common code patterns. For example, it can generate a constructor to assign arguments to properties:
+The Show Code Generation `Command + I` (⌘I) command can automatically generate common code patterns. For example, it can generate a constructor to assign arguments to properties:
 
 ![Show Code Generation](http://g0rdan.com/assets/images/command.plus.o.gif)
 
 After opening the code generation window, select a generator from the upper list with the arrow keys, then hit ⇥ to move to the lower list. Use ␣ to select which items to include, then ⏎ to generate the code.
+
+### Clipboard history
+
+Every programmer uses clipboard when he develops. This is the way to make our code more smells. Of course, it's not good way but still. Sometimes you would like to put some previous pice of code, which was in clipboard before the last one. The IDE provides an opportunity to do that. All your clipboad history saves in `Tools -> Clipboard ring`. Check it out!
+
+### Key bindings
+
+We as programmers are lazy persons. We develop tools and libraries to make our work life more comfortable. Also we appreciate out time. Also we spend a lot of time by typing some code in our favorites IDE. Nowadays, popular IDE's are huge! For example, you have to work with Visual Studio at leats one year to know it pretty well! And life is more easier when you know IDE hot keys! You could do your work much faster if you know how to use IDE without a mouse. The IDE can help you with that!
+
+Many commands can be activated from key bindings, which are shown beside the commands in the menus. Some commands are not shown in the menus, and you can find these in the Key Bindings Preferences panel, where you can also change or add key bindings of your own.
+
+![Key Bindings](http://g0rdan.com/assets/images/key.bindings.gif)
