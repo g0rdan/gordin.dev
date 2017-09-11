@@ -8,8 +8,8 @@ I like a smart people, a good walk and sun.
 ### More Information
 
 Good morning/day/evening, I'm Denis and I'll write some posts about dev, mobile, IT here.
-The main purpose of this blog is making my English level more higher. I'm going to find job in states and I have to impove my language skills. By the way, if you are looking at some programmer and think I can fit for you, let me know.
-I preffer write English articles, but sometimes I'll make translate from En to Ru.
+The main purpose of this blog is making my English level more higher. I'm going to find a job in states and I have to impove my language skills. By the way, if you are looking for some programmer and think I can fit for you, let me know.
+I preffer write English articles, but sometimes I'll make translate from En to Ru (or an opposite way).
 
 Well, that's it.
 
