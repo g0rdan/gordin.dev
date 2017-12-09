@@ -7,8 +7,13 @@ I like a smart people, a good walk and sun.
 
 ### More Information
 
-Good morning/day/evening, I'm Denis and I'll write some posts about dev, mobile, IT here.
-The main purpose of this blog is making my English level more higher. I'm going to find job in states and I have to impove my language skills. By the way, if you are looking at some programmer and think I can fit for you, let me know.
+Good morning/day/evening, I'm Denis and I'll be writing some posts about dev, mobile, IT here.
+
+The main purpose of this blog is making my English level higher.
+I like mobile developing, especially if it is based on Xamarin platform.
+
+I'm Xamarin Cerfified Mobile Delevoper and really like this tech stack.
+
 I preffer write English articles, but sometimes I'll make translate from En to Ru.
 
 Well, that's it.
