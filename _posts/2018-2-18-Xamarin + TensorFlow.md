@@ -9,7 +9,7 @@ share: true
 published: true
 ---
 
-It'll be discussion about three topics. In the first on, which is this article, we'll create a model for image recognition. In the others we'll try to use that model in Xamarin applications.
+It'll be a discussion about three topics. In the first one, which is this article, we'll create a model for image recognition. In the others, we'll try to use that model in Xamarin applications.
 
 - Creating the model
 - Binding for Xamarin.Android
@@ -21,19 +21,19 @@ It was a usual evening. I was reading Medium and in parallel thinking how I shou
 
 ### Intro
 
-The article is going to be step by step instruction how you could create your own model and you don't have to be a neural network specialist! I'm serios, I'm not NN specialist at all, but even I could make a specific DL model without any help from someone.
+The article is going to be step by step instruction how you could create your own model and you don't have to be a neural network specialist! I'm serious, I'm not a NN specialist at all, but even I could make a specific DL model without any help from someone.
 
 But, apparently, for understanding what's going on, you have to know some basics stuff. I'll briefly touch some certain terms to make it more clear:
 
 **Convolutional neural network** - this type of models really good fit for solving image recognition problems.
 
-**Softmax regression** - type of regression which allows you really good split something into categories.
+**Softmax regression** - a type of regression which allows you really good split something into categories.
 
-**Transfer Learning** - this technique allows you remove top layer in your model and retrain it for something else. The reason is why it's evry usefull it's because usually (at leats in my case) we don't have enough CPU/GPU power to train whole model. So, we could take some existing, pretty well working model which was trained for some issue and retrain only one top layer from model for our particullar issue which also has to be simillar with "main problem". In our case we are going to take latest [Inception-v3](https://arxiv.org/abs/1512.00567) model and retrain it.
+**Transfer Learning** - this technique allows you remove the top layer in your model and retrain it for something else. The reason is why it's very useful it's because usually (at least in my case) we don't have enough CPU/GPU power to train the whole model. So, we could take some existing, pretty well-working model which was trained for some issue and retrain only one top layer from model for our particular issue which also has to be similar with "main problem". In our case, we are going to take latest [Inception-v3](https://arxiv.org/abs/1512.00567) model and retrain it.
 
 ### Let's start
 
-So, first of all, we'll try to train the model for a certain categories of pictures - flowers. Wy not cat pictures? You could do that. Flower pictires already exist and we don't have to collect of 100 pics at least for each category. But if you have ones, especialy if they're cat pictures, go ahead. Let's make a folder for our project:
+So, first of all, we'll try to train the model for certain categories of pictures - flowers. Wy not cat pictures? You could do that. Flower pictures already exist and we don't have to collect of 100 pics at least for each category. But if you have ones, especially if they're cat pictures, go ahead. Let's make a folder for our project:
 
 ```
 mkdir flowersproject
@@ -47,7 +47,7 @@ curl -O http://download.tensorflow.org/example_images/flower_photos.tgz
 tar xzf flower_photos.tgz
 ```
 
-So, the next step is cloning tensorflow from githib into our folder
+So, the next step is cloning tensorflow from github into our folder
 
 ```
 git clone https://github.com/tensorflow/tensorflow
@@ -65,17 +65,17 @@ In the simplest cases the retrainer can then be run like this:
 ```
 python tensorflow/examples/image_retraining/retrain.py --image_dir ../flower_photos
 ```
-During the time you'll see simillar lines in terminal:
+During the time you'll see similar lines in terminal:
 
 ![image](http://g0rdan.com/assets/images/5wUW5nDhRi2U4qOtbik-Wg.png)
 
 It means the model began learning.
 
-You need only one thing. The thing is data, which in our case it's categorized pictutes. Each name of flower folders represent a label for this type of data. So, you could find another flower pictures such as carnations, collect more than 100 pics of this type of flowers, put them into 'carnation' folder and the model would be able to recognize it.  
+You need only one thing. The thing is data, which in our case it's categorized pictures. Each name of flower folders represents a label for this type of data. So, you could find another flower pictures such as carnations, collect more than 100 pics of this type of flowers, put them into 'carnation' folder and the model would be able to recognize it.  
 
-After a few minutes (or 20 - 30 mins, depens on your CPU) you'll get a brandnew retrained model! That's all! This'is super easy, isn't? By default, your model will be created as `/tmp/output_graph.pb` and labels information as `/tmp/output_labels.txt`. We need these files for creating mobile applications. If you don't know, the `.pb` format is protobuf which is binary format of representation of structured data. You could image it as JSON but in binary representation. Much smaller, but not readable for humans.
+After a few minutes (or 20 - 30 mins, depends on your CPU) you'll get a brand new retrained model! That's all! This is super easy, isn't? By default, your model will be created as `/tmp/output_graph.pb` and labels information as `/tmp/output_labels.txt`. We need these files for creating mobile applications. If you don't know, the `.pb` format is protobuf which is binary format of representation of structured data. You could imagine it as JSON but in binary representation. Much smaller, but not readable for humans.
 
-Well, we have the model, but how can we test it? So, for that we have other python script which already has written for us. It's ```tensorflow/examples/label_image/label_image.py```.
+Well, we have the model, but how can we test it? So, for that, we have other python script which already has written for us. It's ```tensorflow/examples/label_image/label_image.py```.
 
 Here's an example of how to run the label_image example with your retrained graphs:
 ```
@@ -93,9 +93,9 @@ You should see a list of flower labels, in most cases with daisy on top (though 
 
 ### Improvements for mobile applications
 
-So, we got our model. Let's see the size of this model. I don't know about your's, but mine was something around 95 Mb and, of course, it's unacceptable. Not only because it's sort of a big size for mobile application but also using this model in mobile app could be with lags and freezes.
+So, we got our model. Let's see the size of this model. I don't know about your's, but mine was something around 95 Mb and, of course, it's unacceptable. Not only because it's sort of a big size for a mobile application but also using this model in a mobile app could be with lags and freezes.
 
-Let's find out how we can reduce size of this model with acceptable losses in quality of recognition. There are two basics ways to reduce size of model in this particulat situation. It's juggling of input picture resolution or amount of parameters of model architecture. Fortunately for us, we already have [pretrained 32 models](https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html). To use them we have to pass ```--architecture``` parameter in ```retrain.py``` script. For example this command:
+Let's find out how we can reduce the size of this model with acceptable losses in quality of recognition. There are two basics ways to reduce the size of the model in this particular situation. It's juggling of input picture resolution or amount of parameters of model architecture. Fortunately for us, we already have [pretrained 32 models](https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html). To use them we have to pass ```--architecture``` parameter in ```retrain.py``` script. For example this command:
 ```
 python tensorflow/examples/image_retraining/retrain.py \
     --image_dir ../flower_photos --architecture mobilenet_0.25_128
@@ -104,5 +104,5 @@ will create a 941KB model file in ```/tmp/output_graph.pb```, with 25% of the pa
 
 ### PS
 
-This article briefly explains how we can train a simple neural network model for image recognition. For making all steps which explaid here you should have installed python and git. I recommend visit offitial [TensorFlow tutorial pages](https://www.tensorflow.org/get_started/) for much more information about the topic.
+This article briefly explains how we can train a simple neural network model for image recognition. For making all steps which explaided here you should have installed python and git. I recommend visiting official [TensorFlow tutorial pages](https://www.tensorflow.org/get_started/) for much more information about the topic.
 Next topic is going to show how we could use the trained model in Xamarin.Android application!
