@@ -52,6 +52,15 @@ Archives are pre-releale states for iOS and Android packages. That allows you to
 
 Eventually, archive list will grow with each new version of an app. You shouldn't keep all archives. Basically, you need to save only one last archive and after release even that archive you could remove. So, it's a good practice to delete old archives.
 
+### Look at following folders
+
+```
+/Library/Frameworks/Xamarin.Android.framework/Versions
+/Library/Java/JavaVirtualMachines
+/Users/*USERNAME*/Library/Developer/Xcode/iOS DeviceSupport
+```
+The paths contain versions of products. So, if you see a list of old versions of JVM, for example, you could probably delete them. Similar situation with other products.
+
 ### Clean your Trash
 
 It's pretty obvious thing but you need to clean your trash sometimes. All of these deleted "bin/obj" folders in your trash folder, if you have these, takes a lot of disk space. I get user to clean my disk space with Dr. Cleaner app. It's cleaning not only trash, it handels cleaning your apps and browsers cache and even XCode junk. So, don't be lazy, clean your machine!
