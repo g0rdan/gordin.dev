@@ -52,6 +52,37 @@ Archives are pre-releale states for iOS and Android packages. That allows you to
 
 Eventually, archive list will grow with each new version of an app. You shouldn't keep all archives. Basically, you need to save only one last archive and after release even that archive you could remove. So, it's a good practice to delete old archives.
 
+### Nuget cache
+
+I assume you're .NET developer if you're here and reading this article. So, as .NET developers, we all are using Nuget packages, it's very convinient way to use 3rd-part solutions for your projects. I even can't imagine my workly days without using that.
+
+One of the most advantage things in Nuget ecosystem is caching. If you have used some nuget package and going to use the same package in another project, the package will not download one more time. The IDE will take the package from cache folder. This folder will grow during the time and will contain many packages which you are not using anymore. So, we just could clean the folder and needed packages will be downloaded in next time when the project will be loaded.
+
+```
+~/.nuget/packages
+~/.local/share/NuGet
+```
+Calmly clean folders above.
+
+### Android Library Cache
+
+If you're using Xamarin.Android you have to know that without using Android.Support libraries you basicaly could not create an app. Xamarin has bindings for the librarines and they are named as "Xamarin.Android.Support.*". Google delivers a new versions of the libraries pretty quickly and all old versions are stored in disk as well when it happens. So, as we already know, we have to clean this!
+
+```
+~/.local/share/Xamarin
+```
+
+You can remove all folder there that begins with "Xamarin.*"
+
+### Visual Studio Download Cache
+
+Your favorite IDE has cache folder, too!
+
+```
+~/Library/Caches/VisualStudio/7.0/TempDownload
+```
+Clean that folder and don't worry!
+
 ### Look at following folders
 
 ```
