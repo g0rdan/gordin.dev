@@ -4,40 +4,68 @@ permalink: /cv/
 ---
 ## Denis Gordin
 
-[gordan.ru [at] gmail [dot] com](mailto:gordan.ru@gmail.com)
+location: **Greater New York City Area**
 
-I’m a big C# fan! My area of choice is the .NET universe, especially now that Microsoft has turned to the open source community. Speaking of OSS, I’m also a team member in MvvmCross. My interests include all aspects of mobile development and more. I prefer C# / .NET but if needed, I can easily switch to another language / technology, depending on the task.
+email: [gordinds.job [at] gmail [dot] com](mailto:gordinds.job@gmail.com)
+
+I have over 5 years of experience in mobile development, particularly in the world of Xamarin. However, I’m not bounded by Xamarin; I can write clear and maintainable code in many languages for different platforms. Over the past year I’ve tried to focus more on Flutter as my primary dev tool. Now, I’m looking for a role where I can be challenged, learn new skills, and contribute to an interesting and valuable project.
 
 ### Skills
 ---
-- Programming Languages: C#, F#, JavaScript, PHP, Python
-- Spoken Languages: Russian (Fluent), English (Upper Intermediate)
+- Programming Languages: Dart, C#, Kotlin, Python, F#, JavaScript
+- Spoken Languages: Russian (Fluent), English (Professional working proficiency)
 - Version Control Systems: Git, SVN
 - Methodologies: Agile, Waterfall
-- Areas of interest: Mobile, Cross-platform, .NET/Mono, Functional programming
+- Areas of interest: Mobile, Cross-platform, Flutter, .NET/Mono, Functional programming
 
 ### Work History
 ---
-- *February 2016 – Present*
+- *June 2018 – Present*
+    - [RVI-Group​](https://rvigroup.ru/) – Moscow, Russia 
+    - **Xamarin Delepoler**
+        
+        I developed and maintained an app which acts as a client for IPC, DVR/NVR, VMS devices. The app allows a user to watch live streams from devices, control devices, play archives, PTZ, etc. Also, the app allows one to watch live and archived streams from RVi Cloud. The app can work with the ONVIF and PSIA protocols. Technology stack: C# + F#, Xamarin.Native (iOS and Android), REST API, HTTP/UDP, RTSP/HLS, ONVIF, MVVM, NoSQL, work with difference SDK's from 3rd-party companies.
+
+        Apps (iOS):
+        - https://tinyurl.com/tv34sey 
+        - https://tinyurl.com/rt26fs3 
+
+        Apps (Android): 
+        - https://tinyurl.com/v799th8 
+        - https://tinyurl.com/u3qy7bw
+
+- *February 2016 – May 2018*
     - [SibGeoProject](http://www.sibgeoproject.ru) – Saint Petersburg, Russia 
     - **Xamarin Delepoler**
-        - Create a massive offline cross-platform (Android and iOS) application for heads of Russian oil and gas companies with information about underground natural resources in Russia. Work with large offline databases. Work with maps (online and offline) and documents.
-        - Regularly use the following technologies: Native Xamarin, C#, MvvmCross, Json, Rest API, Http, SQLite, SQLChiper, Google map, ArcGIS map (features, layers, WKB), Unit tests (NUnit, Moq), Git, Azure
+
+        Created a massive offline cross-platform (Android and iOS) application for heads of Russian oil and gas companies with information about underground natural resources in Russia. Work with large offline databases. Work with maps (online and offline) and documents.
+
+        Apps (iOS and Android):
+        - https://tinyurl.com/qrv62zx 
+        - https://tinyurl.com/sfjapnm
+
 - *June 2014 – February 2016*
     - [Notissimus](http://notissimus.com/en/) – Saint Petersburg, Russia
     - **Xamarin Delepoler**
-        - Created Xamarin applications for iOS and Android to order
-        - Developed a CMS analog for smartphones with Xamarin
-        - Regularly worked with the following technologies: C#, Xamarin stack, SQLite, Rest APIs, native Xamarin, Xamarin.Forms, Json, iBeacon, Push notifications, Git, Azure
-        Some projects where I took part or which I developed independently: Tusam – dating app ([iOS](https://itunes.apple.com/ru/app/tusam/id994054191?mt=8), [Android](https://play.google.com/store/apps/details?id=com.notissimus.kupidon4ik)), AcoolaKids – app for offline children’s store ([iOS](https://itunes.apple.com/ru/app/acoolakids/id1024554244?mt=8)), Tapki – store aggregator that used Notissimus’s aggregation service ([iOS](https://itunes.apple.com/ru/app/tapki.-putevoditel-po-magazinam./id848946680?mt=8), [Android](https://play.google.com/store/apps/details?id=com.notissimus.tapki.android)), Zenit – retail store app for FC Zenit soccer team ([Android](https://play.google.com/store/apps/details?id=ru.fczenit.shop), [iOS](https://itunes.apple.com/ru/app/shop.fc-zenit.ru-oficial-nyj/id951664317?mt=8))
+
+        Created Xamarin applications for both iOS and Android platforms. Developed and maintained a CMS analog for smartphones with Xamarin.
+
+        Apps (iOS and Android):
+
+        - https://tinyurl.com/tbqosow
+        - https://tinyurl.com/mf986ku
+        - https://tinyurl.com/tkv8koa
+        - https://tinyurl.com/wuv4ecj
 - *March 2014 – May 2014*
     - [Gaika Group](https://gaikagroup.com) – Saint Petersburg, Russia
     - **Windows Phone (Silverlight) Developer**
+
         - Developed Windows Phone (WP8) application for parents and children to choose between hospitals and make appointments with specific doctors
         - Regularly worked with the following technologies: C#, Silverlight, MVVM, Json
 - *December 2012 – February 2014*
     - [Names.ru](https://names.ru) – Saint Petersburg, Russia
     - **QA Automation Engineer**
+
         - Ran manual tests of site functionality
         - Created functional, load, regression tests
         - Developed strategy for testing
@@ -56,3 +84,11 @@ I’m a big C# fan! My area of choice is the .NET universe, especially now that 
 - *September 2006 – June 2011*
     - [Tomsk State University of Control Systems and Radioelectronics](https://tusur.ru/en)
     - Bachelor of Computer Security in Computer Science
+
+## Projects
+
+**Kids Save Ocean** - ​I help to develop and maintain an Android app on Kotlin using the latest technologies.
+https://github.com/ChildrenSaveOcean
+
+**Flutter.Bird** ​ –​ I created a clone of a very well-known video game using Flutter (Dart).
+https://github.com/g0rdan/Flutter.Bird
