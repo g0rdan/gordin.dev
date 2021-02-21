@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:neon/neon.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'g0rdan\'s website',
+      title: '[gordin.dev]',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -42,13 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         color: Colors.black,
         child: Center(
-          child: Neon(
-            text: 'Coming soon...',
-            color: Colors.green,
-            fontSize: 50,
-            font: NeonFont.Membra,
-            flickeringText: true,
-            flickeringLetters: [1],
+          child: Text(
+            'Soon...',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 36.0,
+            ),
           ),
         ),
       ),
