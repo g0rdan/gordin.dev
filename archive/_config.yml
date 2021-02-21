@@ -1,0 +1,96 @@
+# # # # # # # # # # # # #
+#   K i k o - p l u s   #
+# # # # # # # # # # # # #
+
+# Basic
+name:               "crsspltfrm blog"
+description:        "It's my personal blog about IT, programming and cross platform development. If you love technologies, programming languages and IT in general, you'll find something interesting here."
+
+author:
+  facebook:         
+  youtubeUser:      
+  youtubeChannel:   
+  twitter:          g0rdan
+  github:           g0rdan
+  stackoverflow:    users/1466039/denis-gordin
+  quora:            
+  linkedin:         denis-gordin
+  pinterest:        
+  googlePlus:       
+  instagram:        
+  reddit:           
+  medium:           
+  tumblr:           
+  email:            
+
+copyright:
+  year:             2018
+  name:             Denis Gordin
+
+# Google-analytics
+google-analytics:
+  id:               "UA-30426799-3"
+
+# Disqus
+disqus:
+  id:               "g0rdan"
+
+# URL
+url:                "http://g0rdan.com" # the base hostname & protocol for your site
+# url:                "http://localhost:4000" # use this url when you develop
+baseurl:            "" # the subpath of your site, e.g. /blog
+
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           Europe/Moscow
+permalink:          /:year-:month-:day/:title/
+
+# Pagination
+paginate:           5
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+# Navigation
+nav:
+  - name:           "About"
+    url:            "/about"
+  - name:           "Archive"
+    url:            "/archive"
+  - name:           "Tags"
+    url:            "/tags"
+  - name:           "Github"
+    url:            "https://github.com/g0rdan"
+  - name:           "CV"
+    url:            "/cv"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-admin
+
+exclude:            [vendor]
