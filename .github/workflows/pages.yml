@@ -21,6 +21,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        run: |
+          cd
+          ../flutterw pub get
+          ../flutterw build web
+          cd ..
+
   # Single deploy job since we're just deploying
   deploy:
     environment:
