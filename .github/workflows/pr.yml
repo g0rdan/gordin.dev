@@ -1,0 +1,46 @@
+name: Checks on Pull Requests creation
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "prs"
+  cancel-in-progress: true
+
+jobs:
+  analyzer:
+    name: "Run lints"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Go to project folder
+        run: |
+          cd gordindev
+      - name: Install Dependencies
+        run: |
+          ../flutterw pub get
+      - name: Running Dart Analyzer
+        run: |
+          ../flutterw analyze
+
+  formatter:
+    name: "Run formatter"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Go to project folder
+        run: |
+          cd gordindev
+      - name: Install Dependencies
+        run: |
+          ../flutterw pub get
+      - name: Verify Formatting
+        run: |
+          ../flutterw format --dry-run --set-exit-if-changed test_driver test lib tools integration_test
