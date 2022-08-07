@@ -30,10 +30,13 @@ jobs:
         run: |
           cd gordindev/
           ../flutterw pub get
-          ../flutterw build web
+          ../flutterw build web --release
           cd ..
+      - uses: actions/upload-artifact@v2
+        with:
+          name: web-artifact
+          path: gordindev/build/web
 
-  # Single deploy job since we're just deploying
   deploy:
     needs: build
     environment:
@@ -41,8 +44,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/download-artifact@v2
+        with:
+          name: web-artifact
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Upload artifact
