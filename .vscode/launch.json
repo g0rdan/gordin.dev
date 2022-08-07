@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gordindev",
+            "preLaunchTask": "goToProjectFolder",
+            "cwd": "gordindev",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "gordindev (profile mode)",
+            "preLaunchTask": "goToProjectFolder",
+            "cwd": "gordindev",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "gordindev (release mode)",
+            "preLaunchTask": "goToProjectFolder",
+            "cwd": "gordindev",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "tests",
+            "preLaunchTask": "goToProjectFolder",
+            "cwd": "../flutterw test",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
