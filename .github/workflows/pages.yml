@@ -47,7 +47,7 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v3
       - name: Download web artifact
-      - uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v2
         with:
           name: web-artifact
       - name: Setup Pages
@@ -55,7 +55,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
           path: 'gordindev/build/web'
       - name: Deploy to GitHub Pages
         id: deployment
