@@ -21,7 +21,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,24 +36,6 @@ jobs:
           ../flutterw pub get
           ../flutterw build web --release
           cd ..
-      - uses: actions/upload-artifact@v2
-        with:
-          name: web-artifact
-          path: gordindev/build/web
-
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v3
-      - name: Download web artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: web-artifact
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Upload artifact
