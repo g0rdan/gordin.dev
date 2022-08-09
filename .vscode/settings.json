@@ -1,3 +1,14 @@
 {
     "dart.flutterSdkPath": "../flutterw",
+    "[dart]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.rulers": [
+            80
+        ],
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true
 }
