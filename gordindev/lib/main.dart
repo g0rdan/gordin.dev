@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gordindev/content.dart';
 import 'package:gordindev/profile.dart';
 
 void main() {
+  GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
 }
 
@@ -12,12 +14,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final goRouter = GoRouter(
+      initialLocation: '/',
+      debugLogDiagnostics: true,
+      routes: [
+        GoRoute(
+          path: '/',
+          builder: (context, state) => const MyHomePage(),
+        ),
+      ],
+    );
+    return MaterialApp.router(
+      routerDelegate: goRouter.routerDelegate,
+      routeInformationParser: goRouter.routeInformationParser,
+      routeInformationProvider: goRouter.routeInformationProvider,
       title: 'Gordin\'s dev blog',
       theme: ThemeData.from(colorScheme: const ColorScheme.light()),
       darkTheme: ThemeData.from(colorScheme: const ColorScheme.dark()),
       themeMode: ThemeMode.system,
-      home: const MyHomePage(),
     );
   }
 }
