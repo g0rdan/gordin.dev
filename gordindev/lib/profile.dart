@@ -7,7 +7,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Colors.grey[350],
       child: Stack(
         children: [
           Center(
