@@ -16,7 +16,7 @@ class Profile extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 60.0,
-                backgroundImage: NetworkImage(
+                backgroundImage: AssetImage(
                   'assets/batman.png',
                 ),
                 backgroundColor: Colors.transparent,
