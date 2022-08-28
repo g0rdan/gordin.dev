@@ -12,6 +12,7 @@ import 'package:go_router/go_router.dart';
 import 'package:gordindev/routing/app_router.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   GoRouter.setUrlPathStrategy(UrlPathStrategy.path);
   runApp(const MyApp());
 }
