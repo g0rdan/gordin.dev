@@ -1,3 +1,12 @@
+/*
+ * Filename: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib/main.dart
+ * Path: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib
+ * Created Date: Sunday, August 21st 2022, 5:36:13 pm
+ * Author: Denis Gordin
+ * 
+ * Copyright (c) 2022 Denis Gordin
+ */
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gordindev/routing/app_router.dart';

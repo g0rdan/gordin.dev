@@ -10,5 +10,41 @@
     },
     "editor.bracketPairColorization.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "psi-header.config": {
+        "forceToTop": true,
+        "blankLinesAfter": 1,
+        "spacesBetweenYears": false,
+        "license": "MIT",
+        "author": "Denis Gordin",
+        "initials": "DG",
+        "authorEmail": "denis@gordin.dev",
+        "creationDateZero": "asIs",
+        "hostname": "gordin.dev",
+        "company": "Denis Gordin",
+    },
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "modAuthor": "Modified By:",
+        "modDate": "Last Modified:",
+        "modDateFormat": "dd/MM/yyyy hh:nn:ss",
+        "include": [],
+        "includeGlob": [],
+        "exclude": [
+            "markdown",
+            "json",
+            "jsonc",
+            "shellscript"
+        ],
+        "excludeGlob": [
+            "./**/*/ignoreme.*"
+        ],
+        "autoHeader": "autoSave",
+        "enforceHeader": true,
+        "replace": [
+            "Filename:",
+            "Project"
+        ],
+        "updateLicenseVariables": false
+    },
 }
