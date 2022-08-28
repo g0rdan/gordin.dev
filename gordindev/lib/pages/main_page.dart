@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Expanded(
             flex: 7,
             child: MarkdownWidget(
-              mdPath: 'cv.md',
+              mdPath: 'assets/cv.md',
             ),
           ),
         ],
