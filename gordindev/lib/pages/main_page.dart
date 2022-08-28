@@ -1,6 +1,15 @@
+/*
+ * Filename: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib/pages/main_page.dart
+ * Path: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib/pages
+ * Created Date: Sunday, August 21st 2022, 6:07:44 pm
+ * Author: Denis Gordin
+ * 
+ * Copyright (c) 2022 Denis Gordin
+ */
+
 import 'package:flutter/material.dart';
-import 'package:gordindev/content.dart';
 import 'package:gordindev/profile.dart';
+import 'package:gordindev/widgets/markdown_widget.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -21,7 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Expanded(
             flex: 7,
-            child: Content(),
+            child: MarkdownWidget(
+              mdPath: 'md/cv.md',
+            ),
           ),
         ],
       ),

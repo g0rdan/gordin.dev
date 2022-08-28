@@ -1,7 +1,20 @@
+/*
+ * Filename: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib/social_link.dart
+ * Path: /Users/g0rdan/Projects/g0rdan.github.io/gordindev/lib
+ * Created Date: Monday, August 8th 2022, 8:37:37 pm
+ * Author: Denis Gordin
+ * 
+ * Copyright (c) 2022 Denis Gordin
+ */
+
 import 'package:flutter/material.dart';
 import 'dart:js' as js;
 
-enum SocialLinkType { linkedin, github, twitter }
+enum SocialLinkType {
+  linkedin,
+  github,
+  twitter,
+}
 
 class SocialLink extends StatelessWidget {
   const SocialLink({
