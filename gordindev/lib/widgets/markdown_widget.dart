@@ -7,8 +7,8 @@
  * Copyright (c) 2022 Denis Gordin
  */
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -27,6 +27,7 @@ class MarkdownWidget extends StatelessWidget {
       builder: (_, snapshot) {
         if (snapshot.hasData) {
           return Markdown(
+            selectable: true,
             data: snapshot.data!,
             onTapLink: (String text, String? href, String title) {
               if (href != null) {

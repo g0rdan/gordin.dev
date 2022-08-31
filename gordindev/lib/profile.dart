@@ -10,20 +10,22 @@
 import 'package:flutter/material.dart';
 import 'package:gordindev/social_link.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
 
   @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.grey[350],
       decoration: BoxDecoration(
           gradient: LinearGradient(
         begin: Alignment.topRight,
         end: Alignment.bottomLeft,
         colors: [
-          // Colors.blue,
-          // Colors.red,
           Colors.grey[600]!,
           Colors.grey[350]!,
         ],
@@ -44,9 +46,11 @@ class Profile extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                'Denis Gordin',
-                style: TextStyle(fontSize: 20),
+              const SelectionArea(
+                child: Text(
+                  'Denis Gordin',
+                  style: TextStyle(fontSize: 20),
+                ),
               ),
               const SizedBox(
                 height: 20,
