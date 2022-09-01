@@ -7,35 +7,79 @@
  * Copyright (c) 2022 Denis Gordin
  */
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MarkdownWidget extends StatelessWidget {
+const padding = 16.0;
+
+class MarkdownWidget extends StatefulWidget {
   final String mdPath;
 
-  const MarkdownWidget({
-    required this.mdPath,
-    Key? key,
-  }) : super(key: key);
+  const MarkdownWidget({required this.mdPath, Key? key}) : super(key: key);
+
+  @override
+  State<MarkdownWidget> createState() => _MarkdownWidgetState();
+}
+
+class _MarkdownWidgetState extends State<MarkdownWidget>
+    with TickerProviderStateMixin {
+  late final _controller = AnimationController(
+    value: 0.0,
+    duration: const Duration(milliseconds: 400),
+    vsync: this,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(
+        const Duration(milliseconds: 300),
+        () => _controller.animateTo(1.0),
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<String>(
-      future: rootBundle.loadString(mdPath),
+      future: rootBundle.loadString(widget.mdPath),
       builder: (_, snapshot) {
         if (snapshot.hasData) {
-          return Markdown(
-            selectable: true,
-            data: snapshot.data!,
-            onTapLink: (String text, String? href, String title) {
-              if (href != null) {
-                launchLink(
-                  href,
-                  isNewTab: true,
-                );
-              }
+          return AnimatedBuilder(
+            animation: _controller,
+            builder: (context, child) {
+              return Opacity(
+                opacity: _controller.value,
+                child: Markdown(
+                  padding: EdgeInsets.fromLTRB(
+                    _controller.value * padding,
+                    padding,
+                    padding * 2 - _controller.value * padding,
+                    padding,
+                  ),
+                  selectable: true,
+                  data: snapshot.data!,
+                  onTapLink: (String text, String? href, String title) {
+                    if (href != null) {
+                      launchLink(
+                        href,
+                        isNewTab: true,
+                      );
+                    }
+                  },
+                ),
+              );
             },
           );
         }
