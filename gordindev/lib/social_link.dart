@@ -33,7 +33,7 @@ class SocialLink extends StatelessWidget {
       child: CircleAvatar(
         radius: 16.0,
         backgroundImage: AssetImage(_getIconPath(type)),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.transparent,
       ),
     );
   }
