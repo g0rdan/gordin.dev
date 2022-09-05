@@ -47,7 +47,7 @@ jobs:
     name: "Check goldens"
     environment:
       name: general
-    runs-on: ubuntu-latest
+    runs-on: macos-11
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
     steps:
