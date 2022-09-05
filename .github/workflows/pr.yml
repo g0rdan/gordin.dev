@@ -42,3 +42,18 @@ jobs:
         run: |
           cd gordindev
           ../flutterw format --dry-run --set-exit-if-changed test_driver test lib tools integration_test
+
+  goldens:
+    name: "Check goldens"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          cd gordindev
+          ../flutterw pub get
+      - name: Check Goldens
+        run: |
+          cd gordindev
+          ../flutterw test test/golden_tests/
