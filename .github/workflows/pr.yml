@@ -46,14 +46,15 @@ jobs:
   goldens:
     name: "Check goldens"
     runs-on: ubuntu-latest
+    env:
+      GD_SECRETS: ${{ secrets.GD_SECRETS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: |
-          cd gordindev
-          ../flutterw pub get
       - name: Check Goldens
         run: |
           cd gordindev
+          mkdir lib/keys && touch lib/keys/secrets.dart
+          echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
+          ../flutterw pub get
           ../flutterw test test/golden_tests/
