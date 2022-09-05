@@ -19,14 +19,14 @@ jobs:
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
     steps:
-      - name: Running Dart Analyzer
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Install Dependencies
         run: |
           cd gordindev
-          ../flutterw pub get
           mkdir lib/keys && touch lib/keys/secrets.dart
           echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
+          ../flutterw pub get
           ../flutterw analyze
 
   formatter:
@@ -35,13 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: |
-          cd gordindev
-          ../flutterw pub get
       - name: Verify Formatting
         run: |
           cd gordindev
+          ../flutterw pub get
           ../flutterw format --dry-run --set-exit-if-changed test_driver test lib tools integration_test
 
   goldens:
