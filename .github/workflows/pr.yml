@@ -16,7 +16,7 @@ jobs:
   analyzer:
     name: "Run lints"
     environment:
-      name: github-pages
+      name: general
     runs-on: ubuntu-latest
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
@@ -46,7 +46,7 @@ jobs:
   goldens:
     name: "Check goldens"
     environment:
-      name: github-pages
+      name: general
     runs-on: ubuntu-latest
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
