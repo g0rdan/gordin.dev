@@ -48,3 +48,6 @@ app.*.map.json
 
 # Remove secrest from git
 secrets.dart
+
+# don't check in golden failure output
+**/failures/*.png

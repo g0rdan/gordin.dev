@@ -8,7 +8,7 @@
  */
 
 import 'package:flutter/material.dart';
-import 'dart:js' as js;
+import 'package:url_launcher/url_launcher.dart';
 
 enum SocialLinkType {
   linkedin,
@@ -27,9 +27,7 @@ class SocialLink extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        js.context.callMethod('open', [_getURL(type)]);
-      },
+      onTap: () async => await launchLink(_getURL(type)),
       child: CircleAvatar(
         radius: 16.0,
         backgroundImage: AssetImage(_getIconPath(type)),
@@ -62,5 +60,12 @@ class SocialLink extends StatelessWidget {
       default:
         return '';
     }
+  }
+
+  Future<void> launchLink(String url, {bool isNewTab = true}) async {
+    await launchUrl(
+      Uri.parse(url),
+      webOnlyWindowName: isNewTab ? '_blank' : '_self',
+    );
   }
 }
