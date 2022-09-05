@@ -27,6 +27,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      env:
+        GD_SECRETS: ${{ secrets.GD_SECRETS }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,6 +36,7 @@ jobs:
       - name: Build
         run: |
           cd gordindev/
+          echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
           ../flutterw pub get
           ../flutterw build web --release
           cd ..

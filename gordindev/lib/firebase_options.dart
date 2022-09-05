@@ -3,7 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:gordindev/keys/secrets.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -53,12 +53,12 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static FirebaseOptions web = FirebaseOptions(
-    apiKey: dotenv.env['GD_FIREBASE_WEB_API_KEY']!,
-    appId: dotenv.env['GD_FIREBASE_WEB_APP_ID']!,
-    messagingSenderId: dotenv.env['GD_FIREBASE_WEB_MESSAGING_SENDER_ID']!,
-    projectId: dotenv.env['GD_FIREBASE_WEB_PROJECT_ID']!,
-    authDomain: dotenv.env['GD_FIREBASE_WEB_AUTH_DOMAIN']!,
-    storageBucket: dotenv.env['GD_FIREBASE_WEB_STORAGE_BUCKET']!,
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: firebaseWebApiKey,
+    appId: firebaseWebAppId,
+    messagingSenderId: firebaseWebMessagingSenderId,
+    projectId: firebaseWebProjectId,
+    authDomain: firebaseWebAuthDomain,
+    storageBucket: firebaseWebStorageBucket,
   );
 }
