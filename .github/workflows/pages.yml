@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: |
           cd gordindev/
-          mkdir keys && touch keys/secrets.dart 
+          mkdir lib/keys && touch lib/keys/secrets.dart
           echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
           ../flutterw pub get
           ../flutterw build web --release
