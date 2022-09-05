@@ -14,7 +14,6 @@ void main() {
       (tester) async {
         await tester.pumpWidgetBuilder(
           const MaterialApp(
-            debugShowCheckedModeBanner: false,
             home: Center(child: MyApp()),
           ),
           surfaceSize: const Size(800, 2000),
