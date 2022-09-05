@@ -15,13 +15,15 @@ concurrency:
 jobs:
   analyzer:
     name: "Run lints"
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Dependencies
+      - name: Analyze
         run: |
           cd gordindev
           mkdir lib/keys && touch lib/keys/secrets.dart
@@ -43,6 +45,8 @@ jobs:
 
   goldens:
     name: "Check goldens"
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     env:
       GD_SECRETS: ${{ secrets.GD_SECRETS }}
