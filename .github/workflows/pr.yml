@@ -23,15 +23,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Dependencies
         run: |
-          echo "111"
           cd gordindev
-          echo "222"
-          mkdir lib/keys && touch lib/keys/secrets.dart
-          echo "333"
-          echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
-          echo "444"
           ../flutterw pub get
-          echo "555"
+          mkdir lib/keys && touch lib/keys/secrets.dart
+          echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
           ../flutterw analyze
 
   formatter:
