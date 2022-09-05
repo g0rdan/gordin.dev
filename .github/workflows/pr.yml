@@ -16,16 +16,17 @@ jobs:
   analyzer:
     name: "Run lints"
     runs-on: ubuntu-latest
+    env:
+      GD_SECRETS: ${{ secrets.GD_SECRETS }}
     steps:
-      - name: Checkout
+      - name: Running Dart Analyzer
         uses: actions/checkout@v3
       - name: Install Dependencies
         run: |
           cd gordindev
+          mkdir lib/keys && touch lib/keys/secrets.dart
+          echo $GD_SECRETS | base64 -d > lib/keys/secrets.dart
           ../flutterw pub get
-      - name: Running Dart Analyzer
-        run: |
-          cd gordindev
           ../flutterw analyze
 
   formatter:
