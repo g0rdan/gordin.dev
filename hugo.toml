@@ -1,0 +1,4 @@
+baseURL = 'https://gordin.dev'
+languageCode = 'en-us'
+title = 'Denis` blog'
+theme = 'ezhil'
