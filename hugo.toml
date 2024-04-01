@@ -2,3 +2,21 @@ baseURL = 'https://gordin.dev'
 languageCode = 'en-us'
 title = 'Denis` blog'
 theme = 'ezhil'
+
+copyright = "© Denis Gordin"
+
+# Enable syntax highlighting.
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+# Your Google analytics code.
+googleAnalytics = "G-JR421D3325"
+# Your Disqus sortname.
+# disqusShortname = "localhost"
+
+# Number of posts to show in recent posts list (Optional). Defaults to 10.
+paginate = 10
+
+# Number of characters to show in summary.
+summaryLength = 20
