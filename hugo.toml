@@ -39,7 +39,7 @@ summaryLength = 20
 
     # Switch to dark mode or auto detect mode from OS (Optional).
     # "dark" will set mode to dark and "auto" will switch to dark mode if OS is in dark mode.
-    mode = "dark" # "dark" or "auto"
+    mode = "auto" # "dark" or "auto"
 
 # Main menu which appears below site header.
 [[menu.main]]
@@ -73,6 +73,11 @@ url = "https://github.com/g0rdan"
 name = "LinkedIn"
 icon = "linkedin"
 url = "https://www.linkedin.com/in/denis-gordin/"
+
+[[params.social]]
+name = "StackOverflow"
+icon = "layers"
+url = "https://stackoverflow.com/users/1466039/denis-gordin"
 
 # Enable tags.
 [taxonomies]
